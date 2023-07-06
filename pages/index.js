@@ -10,8 +10,12 @@ function Home({ data }) {
   );
 }
 
-export async function getServerSideProps() {
-  // Perform server-side data fetching or any other logic
+export async function getServerSideProps(context) {
+  const { req, res: contextRes } = context;
+  context.res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=60, stale-while-revalidate=300'
+  );
   const time = new Date();
   const data = `This is server-rendered data generated at ${time.getHours()} : ${time.getMinutes()}`;
   console.log('incoming request');
