@@ -2,12 +2,15 @@ import Image from 'next/image';
 import parse from 'html-react-parser';
 
 export default function HelloWorld() {
+  const time = new Date();
+  const timeString = `${time.getHours()} : ${time.getMinutes()}`
   const demo = (number) => {
     return number * 1000;
   };
   demo();
   return (
     <div>
+      <h2>{timeString}</h2>
       <Image
         loader={({ src }) => src}
         src="https://images.unsplash.com/photo-1673893821298-3ff6b49990a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
