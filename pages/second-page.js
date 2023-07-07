@@ -2,13 +2,13 @@
 import React from 'react';
 import { randomColor } from 'randomcolor';
 
-function Home({ data }) {
+function SecondPage({ data }) {
   const _color = randomColor({
     luminosity: 'dark',
   });
   return (
     <div style={{ backgroundColor: _color }} className="boddy">
-      <h1>Hello, Next.js!</h1>
+      <h1>Hello, It is Second page!</h1>
       <p>{data}</p>
     </div>
   );
@@ -30,4 +30,4 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default Home;
+export default SecondPage;
