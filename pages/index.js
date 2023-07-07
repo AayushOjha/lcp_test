@@ -1,9 +1,10 @@
 // pages/index.js
 import React from 'react';
+import { randomColor } from 'randomcolor';
 
 function Home({ data }) {
   return (
-    <div>
+    <div style={{ backgroundColor: randomColor() }} className="boddy">
       <h1>Hello, Next.js!</h1>
       <p>{data}</p>
     </div>

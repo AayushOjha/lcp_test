@@ -8,6 +8,7 @@
   "dependencies": {
     "html-react-parser": "^3.0.8",
     "next": "11.1",
+    "randomcolor": "^0.6.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "sass": "1.26.3"
